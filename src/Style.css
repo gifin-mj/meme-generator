@@ -1,0 +1,82 @@
+body{
+    margin: 0px;
+    background-color: black;
+}
+.App{
+    width: 70%;
+    margin: 0% 15%;
+    background-color: white;
+    border-radius: 5px;
+}
+.header{
+    width: 100%;
+    height: 80px;
+    border-radius: 5px;
+    background: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet);
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+.header img{
+    margin-left: 3%;
+    margin-right: 10px;
+    width: 32px;
+    height: 35px;
+}
+.header h1{
+    width: 170px;
+    height: 30px;
+    font-family: 'Karla';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 24px;
+    letter-spacing: 0.01em;
+}
+.header h3{
+    width: 189px;
+    height: 14px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 15px;
+    text-align: right;
+    margin:0% 10% 0% 40%;
+}
+.inputform{
+    width: 70%;
+    margin-left: 10%;
+    padding: 5%;
+}
+.text{
+    margin-left:10px;
+    width: 45%;
+    height: 30px;
+    border: 1px solid #D5D4D8;
+    border-radius: 5px;
+    
+}
+
+.button{
+    margin-top: 5%;
+    margin-left: 20px;
+    width: 90%;
+    height: 40px;
+    background: linear-gradient(90.41deg, #711F8D 1.14%, #A818DA 100%);
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    font-family: 'Karla';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    letter-spacing: 0.001em;
+    border: none;
+}
+.button :hover{
+    cursor: move;
+}
+
