@@ -1,5 +1,5 @@
 import React from 'react'
-import Memesdata from '../Memesdata'
+
 
 function Inputform() {
 
@@ -8,12 +8,19 @@ function Inputform() {
         bottext:"",
         randimage:"https://i.imgflip.com/1g8my4.jpg"
     })
-    const [allImages,setURL]=React.useState(Memesdata)
+    const [allImages,setURL]=React.useState([])
+
+    React.useEffect(()=>{
+        fetch("https://api.imgflip.com/get_memes")
+            .then(res => res.json())
+            .then(data => setURL(data.data.memes))
+    },[])
+
+
     function getImageURL(){
 
-        const memesArray=allImages.data.memes
-        const randomNumber = Math.floor(Math.random() * memesArray.length)
-        const imgURL=memesArray[randomNumber].url
+        const randomNumber = Math.floor(Math.random() * allImages.length)
+        const imgURL=allImages[randomNumber].url
         setMeme((prevmeme)=>({
             ...meme,
             randimage:imgURL
@@ -29,6 +36,7 @@ function Inputform() {
         })
     }
     return (
+        
     <div className='inputform'>
         
             <input 
